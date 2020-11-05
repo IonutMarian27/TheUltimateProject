@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
+    public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,13 @@ public class DamagePlayer : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerHealthManager>().DamagePlayer(damage);
+        }
+    }
+
 }
