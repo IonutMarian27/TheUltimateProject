@@ -10,6 +10,8 @@ public class BulletController : MonoBehaviour
 
     public float lifeTime;
 
+    public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,4 +30,15 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+
+            other.gameObject.GetComponent<EnemyHealthManager>().DamageEnemy(damage);
+        }
+    }
+
 }
