@@ -20,10 +20,11 @@ public class CameraFollow : MonoBehaviour
 
 
         // smooth movement looks weird for now
+
         //Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         //transform.position = smoothedPosition;
 
-
+        //transform.LookAt(target);
 
 
     }
