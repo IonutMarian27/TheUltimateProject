@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     void FixedUpdate()
     {
         myRB.velocity = (transform.forward * moveSpeed);
+        
     }
 
     // Update is called once per frame
