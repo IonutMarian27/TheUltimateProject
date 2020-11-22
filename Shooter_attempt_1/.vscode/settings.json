@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿{
+=======
+{
+>>>>>>> fbedb57b0920541d5f5f6b3fe65950c39572fcea
     "files.exclude":
     {
         "**/.DS_Store":true,
